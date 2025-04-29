@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement en Ligne</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./icons/logo.jpg" alt="Logo Workshop" class="logo">
+        <h1>Paiement en Ligne</h1>
+        <p>Finalisez votre inscription en effectuant le paiement</p>
+    </header>
+    <div class="form-container">
+
+         <form id="payment-form">
+        <div class="form-group">
+            <label for="name">Nom  Prénom :</label>
+            <input type="text" id="name" name="name" required placeholder="Nom Prénom">
+        </div>
+
+            
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required placeholder="                                                                             @gmail.com">
+        </div>
+
+
+            <label>Mode de paiement :</label>
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="payment" value="visa" required>
+                    <img src="./icons/visa.jpg" alt="Visa">
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="mastercard">
+                    <img src="./icons/mastarcard.jpg" alt="Mastercard">
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="paypal">
+                    <img src="./icons/paypal.jpg" alt="PayPal">
+                </label>
+            </div>
+
+            <div class="credit-card-details" id="credit-card-details">
+                <div class="form-group">
+                    <label for="card-number">Numéro de carte :</label>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry-date">Date d'expiration :</label>
+                            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cvv">CVV :</label>
+                            <input type="text" id="cvv" name="cvv" >
+                        </div>
+                    </div>
+                </div>
+
+            <button type="submit">Payer</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 - Workshop Tech</p>
+    </footer>
+</body>
+</html>

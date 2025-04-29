@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+   }
+   header {
+    text-align: center;
+    padding: 80px 20px 30px
+    
+ 
+}
+.logo {
+ width: 100px;
+ margin-bottom: 10px;
+}
+h1 {
+ font-size: 3rem;
+}
+.form-container {
+ background: white;
+ padding: 30px;
+ border-radius: 10px;
+ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+ max-width: 400px;
+ width: 100%;
+ color: black;
+}
+button {
+ width: 100%;
+ padding: 12px;
+ background: #4facfe;
+ color: white;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+}
+button:hover {
+ background: #00c6fb;
+}
+
+
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+ 
+.payment-options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+ 
+.payment-options input {
+    display: none;
+}
+ 
+.payment-options img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+ 
+.payment-options label:hover img {
+    transform: scale(1.1);
+}
+ 
+.payment-options input:checked + img {
+    border: 2px solid blue;
+    border-radius: 5px;
+}

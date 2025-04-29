@@ -1,0 +1,99 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.hero {
+    background-image: url('/cnt3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    min-height: 450px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+    
+    animation: bgMove 5s ease-out forwards;
+}
+
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: textAppear 1s ease-out 0.5s forwards;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: textAppear 1s ease-out 0.8s forwards;
+}
+
+
+@keyframes bgMove {
+    from {
+        background-position: center top;
+    }
+    to {
+        background-position: center 10%;
+    }
+}
+
+
+@keyframes textAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.content {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement en Ligne - Workshop Tech</title>
+    <link rel="stylesheet" href="index3.css">
+    <link href="index3.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./icons/devo9.jpeg" alt="Logo Workshop Tech" class="logo">
+            <h1>Paiement en Ligne</h1>
+            <p class="subtitle">Finalisez votre inscription en effectuant le paiement</p>
+        </header>
+
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="name">Nom  Prénom :</label>
+                <input type="text" id="name" name="name" required placeholder="Nom Prénom">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required placeholder="                                                                             @gmail.com">
+            </div>
+
+            <div class="form-group">
+                <label>Montant à payer :</label>
+                <div class="amount-display">0000.0000.0000 DA</div>
+            </div>
+
+            <div class="form-group">
+                <label>Mode de paiement :</label>
+                <div class="payment-methods">
+                    
+                    <label class="payment-option">
+                        <input type="radio" name="payment-method" value="credit-card" checked>
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <img src="./icons/devo3.jpg" alt="Carte de crédit">
+                            </div>
+                            <span>Carte visa</span>
+                        </div>
+                    </label>
+
+                    
+                    <label class="payment-option">
+                        <input type="radio" name="payment-method" value="paypal">
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <img src="./icons/devo1.jpg" alt="PayPal">
+                            </div>
+                            <span>PayPal</span>
+                        </div>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment-method" value="mastercard">
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <img src="./icons/devo7.jpg" alt="mastercard">
+                            </div>
+                            <span>mastercard</span>
+                        </div>
+                    </label>
+                    
+                    <label class="payment-option">
+                        <input type="radio" name="payment-method" value="bank-transfer">
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <img src="./icons/devo8.avif" alt="Virement bancaire">
+                            </div>
+                            <span>Virement bancaire</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class="credit-card-details" id="credit-card-details">
+                <div class="form-group">
+                    <label for="card-number">Numéro de carte :</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry-date">Date d'expiration :</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cvv">CVV :</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="- - - - - - - - - - - - - - - ">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paypal-details" id="paypal-details" style="display: none;">
+                <p>Vous serez redirigé vers PayPal pour compléter votre paiement.</p>
+            </div>
+
+            
+            <div class="bank-transfer-details" id="bank-transfer-details" style="display: none;">
+                <p>Veuillez effectuer un virement aux coordonnées suivantes :</p>
+                <ul>
+                    <li>IBAN: FR76 3000 4000 5000 6000 7000 800</li>
+                    <li>BIC: BNPAFRPPXXX</li>
+                    <li>Montant: €99.00</li>
+                    <li>Référence: WorkshopTech2025</li>
+                </ul>
+            </div>
+
+            <div class="form-group terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">J'accepte les <a href="#">conditions générales</a></label>
+            </div>
+
+            <button type="submit" class="submit-btn">Payer maintenant</button>
+        </form>
+
+        <footer>
+            <p>© 2025 - Workshop Tech</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>
