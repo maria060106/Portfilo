@@ -6,5 +6,5 @@ function afficherDetails(projectId) {
     const formattedNum = projectNum.padStart(2, '0');
     
     // Navigate to the project page
-    window.location.href = `./project/${formattedNum}/index.html`;
+    window.location.href = `./Project/${formattedNum}/index.html`;
 }
